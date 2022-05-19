@@ -6,10 +6,10 @@ var special = '!@#$%^&*()_+{}|:"<>?-=[];,./'
 
 var numOfChar = 0;
 //Default to strongest password
-var useLower = null;
-var useUpper = null;
-var useNumbers = null;
-var useSpecial = null;
+var useLower = true;
+var useUpper = true;
+var useNumbers = true;
+var useSpecial = true;
 
 var generateBtn = document.querySelector("#generate");
 var passwordText = document.querySelector("#password");
@@ -32,7 +32,7 @@ function createPassword() {
   if(numOfChar <= 7){
     alert('Needs to be at least 8 characters')
     createPassword();
-  }else if(numOfChar > 127){
+  }else if(numOfChar > 128){
     alert('Thats too long: max 128');
     createPassword();
   }else{
@@ -71,6 +71,7 @@ function createPassword() {
       //lower upper and special
     }else if(useLower && useUpper && !useNumbers && useSpecial){
       passwordString = lowercase.concat(uppercase, special);
+
       //lower upper number special - all 4
     }else if(useLower && useUpper && useNumbers && useSpecial){
       passwordString = lowercase.concat(uppercase, numbers, special);
