@@ -1,6 +1,6 @@
 //Global Variables
 
-var numOfChararacters = 0;
+var numOfChar = 0;
 //Default to strongest password
 var useLower = true;
 var useUpper = true;
@@ -15,13 +15,21 @@ function writePassword() {
   // var passwordText = document.querySelector("#password");
   
   
-  //Adding Prompts
-  numOfChararacters = prompt('Password length')
+  //Prompts
+  numOfChar = prompt('Password length')
   let useLower = confirm('Do you want to use lowercase letters')
   let useUpper = confirm('Do you want uppercase letters');
   let useNumbers = confirm('Do you want to use numbers');
   let useSpecial = confirm('Do you want to use special characters')
-  
+
+  //Error handling for the prompt numOfCharacters
+  if(numOfChar < 7){
+    alert('Needs to be at least 8 characters')
+  }else if(numOfChar > 127){
+    alert('Thats too long')
+  }else{ 
+    console.log(numOfChar);
+  }
   // passwordText.value = password;
   
 }
