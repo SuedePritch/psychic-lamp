@@ -11,3 +11,6 @@
 - Password is shown on the screen for the user to copy
 
 
+[Live Site](https://suedepritch.github.io/psychic-lamp/)
+
+![screenshot](./assets/images/screenshot.png)
