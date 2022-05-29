@@ -1,6 +1,4 @@
-# Module 3 Challenge
-
-## Password Generator
+# Password Generator
 
 ## The goal of this project is to create passwords of different complexities
 - The user presses a button to generate a password.
